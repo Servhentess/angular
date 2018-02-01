@@ -1,0 +1,5 @@
+<div>id: {{ car.id }}</div>
+<div>model: {{ car.model | uppercase }}</div>
+<div>nombre de place: {{ car.nbrDePlace }}</div>
+<input [(ngModel)]="car.model" />
+<input [(ngModel)]="car.nbrDePlace" />

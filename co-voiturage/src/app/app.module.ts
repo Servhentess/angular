@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CarService } from './car.service';
+import { CarCreateComponent } from './car-create/car-create.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    CarCreateComponent
   ],
   imports: [
     BrowserModule,

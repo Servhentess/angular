@@ -3,12 +3,22 @@ import { Car } from './model/car';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
+import { environment } from '../environments/environment';
+
 @Injectable()
 export class CarService {
 
-  constructor(private http: HttpClient) { }
+  urlApi : string = environment.urlApi;
+  httpOptions = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
+
+  constructor(private http: HttpClient) {
+   }
 
   getCars(): Observable <Car[]> {
-    return this.http.get<Car[]>("http://localhost:8080/cars");
+    return this.http.get<Car[]>(this.urlApi + "cars");
+  }
+
+  createCar(): Observable <Car> {
+    return this.http.post<Car>(this.urlApi+"cars", car, this.httpOptions);
   }
 }

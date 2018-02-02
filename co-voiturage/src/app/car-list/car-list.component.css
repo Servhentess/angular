@@ -1,3 +1,5 @@
-#blockDiv{
-    text-align: center;
+#premierComponent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

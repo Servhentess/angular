@@ -9,9 +9,15 @@ import { Car } from '../model/car';
 })
 export class CarCreateComponent implements OnInit {
 
+  car: Car = new Car();
+
   constructor(private carService: CarService) { }
 
   ngOnInit() {    
   }
 
+  onSubmit(){
+    console.log("entree dans le onSubmit");
+    this.carService.createCar(this.car);
+  }
 }

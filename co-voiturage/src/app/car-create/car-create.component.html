@@ -1,6 +1,6 @@
-<form onsubmit="">
-  Model : <input type="text" name="model"><br/>
-  Marque : <input type="text" name="brand"><br/>
-  Nombre de place : <input type="text" name="nbrDePlace"><br/>
-  <input type="submit">
+<form>
+  Model : <input [(ngModel)]="car.model" type="text" name="model"/><br/>
+  Marque : <input [(ngModel)]="car.marque" type="text" name="brand"/><br/>
+  Nombre de place : <input [(ngModel)]="car.nbrDePlace" type="text" name="nbrDePlace"/><br/>
+  <input type="submit" (click)="onSubmit()"/>
 </form>

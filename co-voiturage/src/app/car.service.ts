@@ -18,7 +18,8 @@ export class CarService {
     return this.http.get<Car[]>(this.urlApi + "cars");
   }
 
-  createCar(): Observable <Car> {
+  createCar(car : Car): Observable <Car> {
+    console.log("entree dans le createCar", this.urlApi+"cars", car);
     return this.http.post<Car>(this.urlApi+"cars", car, this.httpOptions);
   }
 }

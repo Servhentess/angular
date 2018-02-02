@@ -7,5 +7,5 @@
 </div>
 
 <div *ngIf="selectedCar">
-    The selected car is {{ selectedCar.model }}
+    <app-car-detail [car]="selectedCar"></app-car-detail>
 </div>

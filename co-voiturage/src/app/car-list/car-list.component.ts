@@ -17,7 +17,7 @@ export class CarListComponent implements OnInit {
   constructor(private carService: CarService) { }
 
   ngOnInit() {
-    this.cars = this.carService.getCars();
+    this.carService.getCars().subscribe(cars => this.cars = cars);
   }
 
   onSelect(car: Car) : void {

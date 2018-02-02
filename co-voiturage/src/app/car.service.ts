@@ -8,7 +8,7 @@ export class CarService {
 
   constructor(private http: HttpClient) { }
 
-  getCars(): Car[] {
-    this.http.get<Car[]>("http://localhost:8080/cars");
+  getCars(): Observable <Car[]> {
+    return this.http.get<Car[]>("http://localhost:8080/cars");
   }
 }

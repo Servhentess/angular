@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CarService } from './car.service';
 import { CarCreateComponent } from './car-create/car-create.component';
+import { CarUpdateComponent } from './car-update/car-update.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CarCreateComponent } from './car-create/car-create.component';
     AppComponent,
     CarListComponent,
     CarDetailComponent,
-    CarCreateComponent
+    CarCreateComponent,
+    CarUpdateComponent
   ],
   imports: [
     BrowserModule,

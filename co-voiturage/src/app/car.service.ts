@@ -15,14 +15,14 @@ export class CarService {
    }
 
   getCars(): Observable <Car[]> {
-    return this.http.get<Car[]>(this.urlApi + "cars");
+    return this.http.get<Car[]>(this.urlApi+"cars");
   }
 
   createCar(car : Car): Observable <Car> {
     return this.http.post<Car>(this.urlApi+"cars", car, this.httpOptions);
   }
 
-  /*changeCar(car : Car): Observable <Car>{
-    return this.http.put<Car>(this.urlApi+"cars", car, this.httpOptions);
-  }*/
+  changeCar(car : Car): Observable <Car>{
+    return this.http.put<Car>(this.urlApi+"cars/"+car.id, car, this.httpOptions);
+  }
 }

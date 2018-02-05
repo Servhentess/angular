@@ -17,7 +17,6 @@ export class CarCreateComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("entree dans le onSubmit");
-    this.carService.createCar(this.car);
+    this.carService.createCar(this.car).subscribe(car => this.car = car);
   }
 }

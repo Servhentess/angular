@@ -11,6 +11,7 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CarService } from './car.service';
 import { CarCreateComponent } from './car-create/car-create.component';
 import { CarUpdateComponent } from './car-update/car-update.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CarUpdateComponent } from './car-update/car-update.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [CarService],
   bootstrap: [AppComponent]

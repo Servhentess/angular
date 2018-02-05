@@ -1,5 +1,7 @@
 <p id="deuxiemeComponent">
   Id    : {{ car.id }}<br/>
   Model : {{ car.model }}<br/>
-  Place : {{ car.nbrDePlace}}
+  Place : {{ car.nbrDePlace}}<br/>
+  <input type="button" value="Modifier" (click)="onUpdate()">
+  <input type="button" value="Supprimer" (click)="onDelete()">
 </p>

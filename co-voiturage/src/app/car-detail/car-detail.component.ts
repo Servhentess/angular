@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Car } from '../model/car';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-car-detail',
@@ -10,9 +11,16 @@ export class CarDetailComponent implements OnInit {
 
   @Input() car: Car;
 
-  constructor() { }
+  constructor(private carService : CarService) { }
 
   ngOnInit() {
   }
 
+  onUpdate(){
+  }
+
+  onDelete(){
+    console.log("on entre dans le delete");
+    this.carService.deleteCar(this.car);
+  }
 }

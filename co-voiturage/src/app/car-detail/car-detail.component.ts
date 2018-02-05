@@ -17,7 +17,6 @@ export class CarDetailComponent implements OnInit {
   }
 
   onUpdate(){
-    console.log("j'y suis !")
     this.carService.changeCar(this.car).subscribe();
   }
 

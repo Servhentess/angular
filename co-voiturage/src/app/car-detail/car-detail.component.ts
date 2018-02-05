@@ -17,10 +17,11 @@ export class CarDetailComponent implements OnInit {
   }
 
   onUpdate(){
+    console.log("j'y suis !")
+    this.carService.changeCar(this.car).subscribe();
   }
 
   onDelete(){
-    console.log("on entre dans le delete");
     this.carService.deleteCar(this.car);
   }
 }

@@ -1,7 +1,7 @@
 <p id="deuxiemeComponent">
   Id    : {{ car.id }}<br/>
-  Model : {{ car.model }}<br/>
-  Place : {{ car.nbrDePlace}}<br/>
+  Model : {{ car.model }}<input [(ngModel)]="car.model" type="text"><br/>
+  Place : {{ car.nbrDePlace}}<input [(ngModel)]="car.nbrDePlace" type="text"><br/>
   <input type="button" value="Modifier" (click)="onUpdate()">
   <input type="button" value="Supprimer" (click)="onDelete()">
 </p>

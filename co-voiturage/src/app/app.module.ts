@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CarService } from './car.service';
 import { CarCreateComponent } from './car-create/car-create.component';
-import { CarUpdateComponent } from './car-update/car-update.component';
 import { AppRoutingModule } from './/app-routing.module';
 
 
@@ -19,8 +18,7 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     CarListComponent,
     CarDetailComponent,
-    CarCreateComponent,
-    CarUpdateComponent
+    CarCreateComponent
   ],
   imports: [
     BrowserModule,

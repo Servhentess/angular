@@ -10,9 +10,11 @@ import { HttpClientModule } from '@angular/common/http'
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CarService } from './car.service';
 import { CarCreateComponent } from './car-create/car-create.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { CarUpdateComponent } from './car-update/car-update.component';
 import { CarDeleteComponent } from './car-delete/car-delete.component';
+import { CarMenuComponent } from './car-menu/car-menu.component';
+
+
 
 
 @NgModule({
@@ -22,13 +24,13 @@ import { CarDeleteComponent } from './car-delete/car-delete.component';
     CarDetailComponent,
     CarCreateComponent,
     CarUpdateComponent,
-    CarDeleteComponent
+    CarDeleteComponent,
+    CarMenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    AppRoutingModule
+    HttpClientModule
   ],
   providers: [CarService],
   bootstrap: [AppComponent]
